@@ -1,16 +1,22 @@
 {
-  "name": "nested-tailwind",
-  "version": "1.0.0",
-  "description": "An extension to tailwind to enable the styling of child elements.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "tailwind",
-    "nested",
-    "extension"
-  ],
-  "author": "Jörgen Krieger",
-  "license": "ISC"
+	"name": "@labelnoir/nested-tailwind",
+	"version": "1.0.0",
+	"description": "An extension to tailwind to enable the styling of child elements.",
+	"repository": {
+		"url": "git://github.com:labelnoir/nested-tailwind.git"
+	},
+	"publishConfig": {
+		"@labelnoir:registery": "https://npm.pkg.github.com"
+	},
+	"main": "src/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"tailwind",
+		"nested",
+		"extension"
+	],
+	"author": "Jörgen Krieger",
+	"license": "Unlicense"
 }
