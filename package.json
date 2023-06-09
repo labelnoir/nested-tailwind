@@ -1,0 +1,16 @@
+{
+  "name": "nested-tailwind",
+  "version": "1.0.0",
+  "description": "An extension to tailwind to enable the styling of child elements.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tailwind",
+    "nested",
+    "extension"
+  ],
+  "author": "Jörgen Krieger",
+  "license": "ISC"
+}
