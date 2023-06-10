@@ -1,4 +1,4 @@
-![Nested Tailwind](/demo/nested-tailwind.svg)
+![Nested Tailwind](https://raw.githubusercontent.com/labelnoir/nested-tailwind/ad1453c9fb31f8f1ed41856f42c68413ca5f0879/demo/nested-tailwind.svg)
 
 A simple extension to TailwindCSS to enable nested styling. Based on the official [typography plugin](https://github.com/tailwindlabs/tailwindcss-typography)
 , but without the default styling and a bit more inclusive for different types of content.
