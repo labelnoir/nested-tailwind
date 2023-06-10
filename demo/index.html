@@ -9,10 +9,8 @@
 	</head>
 	<body>
 		<main class="container mx-auto text-slate-800 flex flex-col gap-y-20 py-20">
-			<header class="flex flex-col gap-y-10">
-				<figure class="w-[30rem]">
-					<include src="tailwind-logo.svg"></include>
-				</figure>
+			<header class="flex flex-col gap-y-10 items-start">
+				<include src="nested-tailwind.svg"></include>
 
 				<p class="max-w-prose text-xl leading-normal">
 					A simple extension to TailwindCSS to enable nested styling. Based on
@@ -20,7 +18,7 @@
 					bit more inclusive for different types of content.
 				</p>
 
-				<hr />
+				<hr class="w-full" />
 			</header>
 
 			<!-- This is the demo/playground -->
@@ -91,7 +89,7 @@
 				</article>
 
 				<article
-					class="reset-nested-h2 nested-h2:text-red-500 nested-h2:text-4xl"
+					class="reset-nested-h2 nested-h2:text-blue-800 nested-h2:text-4xl"
 				>
 					<include
 						src="note.html"

@@ -1,7 +1,7 @@
-# Nested Tailwind
+![Nested Tailwind](/demo/nested-tailwind.svg)
 
-A simple extension to TailwindCSS to enable nested styling. Based on the official typography plugin, but without
-the default styling and a bit more inclusive for different types of content.
+A simple extension to TailwindCSS to enable nested styling. Based on the official [typography plugin](https://github.com/tailwindlabs/tailwindcss-typography)
+, but without the default styling and a bit more inclusive for different types of content.
 
 ## Installation
 
@@ -62,4 +62,13 @@ class and apply new classes for nested styling from that point on.
 		<p>Lorem ipsum dolor sit amet...</p>
 	</article>
 </div>
+```
+
+## Demo
+
+A simple demo/playground has been created using Parcel. Clone the repo, install the dependencies and run the demo script.
+
+```bash
+npm i
+npm run demo
 ```
