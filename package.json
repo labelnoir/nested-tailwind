@@ -6,7 +6,7 @@
 		"url": "git://github.com:labelnoir/nested-tailwind.git"
 	},
 	"publishConfig": {
-		"@labelnoir:registery": "https://npm.pkg.github.com"
+		"@labelnoir:registry": "https://npm.pkg.github.com"
 	},
 	"main": "src/index.js",
 	"scripts": {
