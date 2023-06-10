@@ -1,6 +1,6 @@
 {
 	"name": "@labelnoir/nested-tailwind",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "An extension to tailwind to enable the styling of child elements.",
 	"repository": {
 		"url": "git://github.com:labelnoir/nested-tailwind.git"
@@ -10,7 +10,8 @@
 	},
 	"main": "src/index.js",
 	"scripts": {
-		"test": "echo \"No test specified yet\" && exit 0"
+		"test": "echo \"No test specified yet\" && exit 0",
+		"demo": "parcel demo/index.html"
 	},
 	"keywords": [
 		"tailwind",
@@ -18,5 +19,15 @@
 		"extension"
 	],
 	"author": "Jörgen Krieger",
-	"license": "Unlicense"
+	"license": "Unlicense",
+	"peerDependencies": {
+		"tailwindcss": ">=3.0.0 || insiders"
+	},
+	"devDependencies": {
+		"parcel": "^2.9.2",
+		"postcss": "^8.4.24",
+		"posthtml-doctype": "^1.1.1",
+		"posthtml-include": "^1.7.4",
+		"tailwindcss": "^3.3.2"
+	}
 }

@@ -116,13 +116,26 @@ const htmlElements = [
 	["wbr"]
 ]
 
-module.exports = {
-	plugins: [
-		plugin(function ({ addVariant }) {
-			htmlElements.map(([name, ...selectors]) => {
-				if (selectors.length === 0) selectors = name
-				addVariant(`nested-${name}`, `& :is(${selector}):not(:where(& .reset-nested *))`)
-			})
-		}
-  ]
-}
+module.exports = plugin(
+	function ({ addVariant }) {
+		htmlElements.map(([name, ...selectors]) => {
+			if (selectors.length === 0) selectors = name
+
+			// Default not selector
+			const notSelectors = [
+				':where(& .reset-nested *)',
+				`:where(& .reset-nested-${name} *)`
+			]
+
+			// Add reset-nested for grouped elements
+			if (typeof selectors === 'object')
+				notSelectors.push(selectors.map(selector => `:where(& .reset-nested-${selector} ${selector})`))
+
+			// Add reset-nested-headings for each heading element
+			if (/h\d/gm.test(name))
+				notSelectors.push(':where(& .reset-nested-headings *)')
+
+			addVariant(`nested-${name}`, `& :is(${selectors}):not(${notSelectors.join(', ')})`)
+		})
+	}, {}
+)

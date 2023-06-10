@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nested Tailwind</title>
+		<link rel="shortcut icon" href="./favicon.ico" />
+		<link href="./style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<main class="container mx-auto text-slate-800 flex flex-col gap-y-20 py-20">
+			<header class="flex flex-col gap-y-10">
+				<figure class="w-[30rem]">
+					<include src="tailwind-logo.svg"></include>
+				</figure>
+
+				<p class="max-w-prose text-xl leading-normal">
+					A simple extension to TailwindCSS to enable nested styling. Based on
+					the official typography plugin, but without the default styling and a
+					bit more inclusive for different types of content.
+				</p>
+
+				<hr />
+			</header>
+
+			<!-- This is the demo/playground -->
+			<div
+				class="grid grid-cols-2 gap-10 nested-headings:text-blue-300 nested-h2:text-3xl nested-h3:font-bold nested-em:text-blue-300"
+			>
+				<article>
+					<include
+						src="note.html"
+						locals='{
+							"warning": "This is the default styling" 
+						}'
+					></include>
+					<h2>All h2 should be this big by default</h2>
+					<h3>All h3 should be bold by default</h3>
+					<p class="mt-5">
+						<em>All headings should be this blue by default &mdash;</em> Lorem
+						ipsum dolor sit amet, consectetur adipiscing elit. In quis rhoncus
+						diam, quis malesuada turpis. Donec ut ipsum libero. Vestibulum
+						tristique lacinia orci, eget porta est iaculis in. Donec eu lobortis
+						elit, vitae dictum lectus. Sed lacus ante, condimentum at augue nec,
+						ultricies gravida lorem. Quisque eget nisl ut lorem consequat
+						sodales. Vivamus in massa vel metus dignissim rutrum. Sed felis sem,
+						consequat nec semper facilisis, interdum et nulla.
+					</p>
+				</article>
+
+				<article class="reset-nested-h2">
+					<include
+						src="note.html"
+						locals='{
+							"warning": "This example resets h2 specific styling" 
+						}'
+					></include>
+					<h2>This h2 is reset</h2>
+					<h3>This h3 is unaffected</h3>
+					<p class="mt-5">
+						<em>All headings should be this blue by default &mdash;</em> Lorem
+						ipsum dolor sit amet, consectetur adipiscing elit. In quis rhoncus
+						diam, quis malesuada turpis. Donec ut ipsum libero. Vestibulum
+						tristique lacinia orci, eget porta est iaculis in. Donec eu lobortis
+						elit, vitae dictum lectus. Sed lacus ante, condimentum at augue nec,
+						ultricies gravida lorem. Quisque eget nisl ut lorem consequat
+						sodales. Vivamus in massa vel metus dignissim rutrum. Sed felis sem,
+						consequat nec semper facilisis, interdum et nulla.
+					</p>
+				</article>
+
+				<article class="reset-nested-headings">
+					<include
+						src="note.html"
+						locals='{
+							"warning": "This example resets all heading related styling" 
+						}'
+					></include>
+					<h2>This h2 should be reset</h2>
+					<h3>This h3 should be reset</h3>
+					<p class="mt-5">
+						<em>All headings should be this blue by default &mdash;</em> Lorem
+						ipsum dolor sit amet, consectetur adipiscing elit. In quis rhoncus
+						diam, quis malesuada turpis. Donec ut ipsum libero. Vestibulum
+						tristique lacinia orci, eget porta est iaculis in. Donec eu lobortis
+						elit, vitae dictum lectus. Sed lacus ante, condimentum at augue nec,
+						ultricies gravida lorem. Quisque eget nisl ut lorem consequat
+						sodales. Vivamus in massa vel metus dignissim rutrum. Sed felis sem,
+						consequat nec semper facilisis, interdum et nulla.
+					</p>
+				</article>
+
+				<article
+					class="reset-nested-h2 nested-h2:text-red-500 nested-h2:text-4xl"
+				>
+					<include
+						src="note.html"
+						locals='{
+							"warning": "This example shows overwriting" 
+						}'
+					></include>
+					<h2>This h2 should be overwritten</h2>
+					<h3>This h3 should remain unchanged</h3>
+					<p class="mt-5">
+						<em>All headings should be this blue by default &mdash;</em> Lorem
+						ipsum dolor sit amet, consectetur adipiscing elit. In quis rhoncus
+						diam, quis malesuada turpis. Donec ut ipsum libero. Vestibulum
+						tristique lacinia orci, eget porta est iaculis in. Donec eu lobortis
+						elit, vitae dictum lectus. Sed lacus ante, condimentum at augue nec,
+						ultricies gravida lorem. Quisque eget nisl ut lorem consequat
+						sodales. Vivamus in massa vel metus dignissim rutrum. Sed felis sem,
+						consequat nec semper facilisis, interdum et nulla.
+					</p>
+				</article>
+			</div>
+			<footer class="text flex flex-col gap-y-5 text-slate-700">
+				<hr />
+				<a
+					href="https://github.com/labelnoir/nested-tailwind"
+					target="_blank"
+					class="flex items-center gap-x-2 text-slate-700 hover:text-blue-300 transition"
+					rel="noopener noreferrer"
+				>
+					<include src="github.svg"></include>
+					Check on GitHub
+				</a>
+			</footer>
+		</main>
+	</body>
+</html>

@@ -1,1 +1,6 @@
+# Node dependencies
 node_modules
+
+# Parcel output
+dist
+.parcel-cache
