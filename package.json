@@ -5,9 +5,6 @@
 	"repository": {
 		"url": "git://github.com:labelnoir/nested-tailwind.git"
 	},
-	"publishConfig": {
-		"@labelnoir:registry": "https://npm.pkg.github.com"
-	},
 	"main": "src/index.js",
 	"scripts": {
 		"test": "echo \"No test specified yet\" && exit 0",
